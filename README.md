@@ -100,7 +100,7 @@ This dataset was scraped, then validated against:
 - All 97 books, 4,096 chapters accounted for
 - No encoding/mojibake issues detected in Arabic or English text
 
-A validation script (see `validate_bukhari.py` in the scraper repo) is available if you want to re-run these checks yourself after any re-scrape.
+A validation script (see `Scraper Output Tester.py` in the scraper repo) is available if you want to re-run these checks yourself after any re-scrape.
 
 ## Usage
 
@@ -135,12 +135,12 @@ for (const book of data.Books) {
 
 ## Regenerating this dataset
 
-The scraper (`main.py`) and validator (`validate_bukhari.py`) used to produce this file are included in this repo. Requirements: Python 3, `requests`, `beautifulsoup4`.
+The scraper (`Scraper.py`) and validator (`Scraper Output Tester.py`) used to produce this file are included in this repo. Requirements: Python 3, `requests`, `beautifulsoup4`.
 
 ```bash
 pip install requests beautifulsoup4
-python3 main.py           # scrapes all 97 books, writes bukhari_full.json
-python3 validate_bukhari.py bukhari_full.json   # runs the QC checks above
+python3 Scraper.py           # scrapes all 97 books, writes bukhari_full.json
+python3 Scraper Output Tester.py bukhari_full.json   # runs the QC checks above
 ```
 
 ## License / attribution
